@@ -1,10 +1,11 @@
 import os
 import subprocess
-import time
 import tempfile
-from PIL import Image
+import time
+
 import cv2
 import numpy as np
+from PIL import Image
 
 
 class ADBManager:

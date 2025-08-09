@@ -2,12 +2,12 @@ import os
 
 from paddleocr import PaddleOCR
 
-from adb.adb_manager import ADBManager
+from utils.adb_manager import ADBManager
 from paddle_ocr.paddle_result import PaddleResult
 
 if __name__ == "__main__":
-    adb = ADBManager(port=16384)
-    if not adb.connect():
+    adb = ADBManager(default_port=16384)
+    if not adb.connect_device():
         raise RuntimeError("无法连接到设备")
 
     os.environ["PATH"] = (
